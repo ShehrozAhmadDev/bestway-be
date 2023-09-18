@@ -5,9 +5,9 @@ import bodyParser from "body-parser";
 import helmet from "helmet";
 import morgan from "morgan";
 
-import userRoutes from "./src/routes/user.router.js";
-import adminRoutes from "./src/routes/admin.router.js";
-import companyRoutes from "./src/routes/company.router.js";
+import userRoutes from "./routes/user.router.js";
+import adminRoutes from "./routes/admin.router.js";
+import companyRoutes from "./routes/company.router.js";
 
 import dotenv from "dotenv";
 const app = express();
@@ -42,10 +42,9 @@ mongoose
 // Set up routes
 
 app.set("Access-Control-Allow-Origin", "*");
-app.use("/user", userRoutes);
-app.use("/admin", adminRoutes);
-app.use("/company", companyRoutes);
-
-// Add other route files as needed
-
-// Start the server
+app.use("/api/user", userRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/company", companyRoutes);
+app.get("/", function (req, res) {
+  res.send("Welcome to express app");
+});

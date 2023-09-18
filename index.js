@@ -6,7 +6,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 import userRoutes from "./src/routes/user.router.js";
-import adminRoutes from "./src/Routes/admin.router.js";
+import adminRoutes from "./src/routes/admin.router.js";
 import companyRoutes from "./src/routes/company.router.js";
 
 import dotenv from "dotenv";

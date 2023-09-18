@@ -43,8 +43,12 @@ mongoose
 
 // Use the userRoutes for all routes starting with '/api'
 app.get("/", function (req, res) {
-  res.send("Hello");
+  res.send("Welcome to express app");
 });
+app.get("/api/user/hello", function (req, res) {
+  res.send("Welcome to helo app");
+});
+app.set("Access-Control-Allow-Origin", "*");
 app.use("/api/user", userRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/company", companyRoutes);

@@ -7,11 +7,25 @@
         "use": "@vercel/node"
       }
     ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "./src"
-      }
-    ]
+    
+        "routes": [
+          {
+            "src": "/api/user/.*",
+            "dest": "./src/routes/user.router.js"
+          },
+          {
+            "src": "/api/admin/.*",
+            "dest": "./src/routes/admin.router.js"
+          },
+          {
+            "src": "/api/company/.*",
+            "dest": "./src/routes/company.router.js"
+          },
+          {
+            "src": "/(.*)",
+            "dest": "./src/routes/index.js"
+          }
+        ]
+      
   }
   

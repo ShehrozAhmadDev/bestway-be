@@ -42,16 +42,10 @@ mongoose
 // Set up routes
 
 app.set("Access-Control-Allow-Origin", "*");
-app.use("/api/user", userRoutes);
-app.use("/api/admin", adminRoutes);
-app.use("/api/company", companyRoutes);
-// Use the userRoutes for all routes starting with '/api'
-app.get("/", function (req, res) {
-  res.send("Welcome to express app");
-});
-app.get("/api/user/hello", function (req, res) {
-  res.send("Welcome to helo app");
-});
+app.use("/user", userRoutes);
+app.use("/admin", adminRoutes);
+app.use("/company", companyRoutes);
+
 // Add other route files as needed
 
 // Start the server

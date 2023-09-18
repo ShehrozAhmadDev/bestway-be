@@ -42,6 +42,9 @@ mongoose
 // Set up routes
 
 // Use the userRoutes for all routes starting with '/api'
+app.get("/", function (req, res) {
+  res.send("Hello");
+});
 app.use("/api/user", userRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/company", companyRoutes);
